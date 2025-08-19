@@ -1,7 +1,7 @@
 /* ---- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS ---- */
 :root {
-    --azul-caixa: #005A9C;
-    --verde-esperanca: #2E8B57;
+    /* A cor --azul-caixa foi removida e substituída pelo verde */
+    --verde-principal: #2E8B57; /* Usando o verde como cor primária */
     --cinza-fundo: #F4F7F6;
     --cinza-texto: #333333;
     --branco: #FFFFFF;
@@ -48,11 +48,13 @@ h1, h2, h3 {
     align-items: center;
 }
 
-.header .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--azul-caixa);
+/* NOVO: Regra para controlar o tamanho da imagem da logo */
+.logo {
+    width: 200px; /* <-- Altere este valor para o tamanho que desejar */
+    height: auto; /* Mantém a proporção da imagem */
 }
+
+/* Regra de texto do logo antigo removida */
 
 .header nav a {
     margin: 0 15px;
@@ -75,7 +77,7 @@ h1, h2, h3 {
 }
 
 .btn-primary {
-    background-color: var(--verde-esperanca);
+    background-color: var(--verde-principal);
     color: var(--branco);
 }
 
@@ -86,12 +88,12 @@ h1, h2, h3 {
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--azul-caixa);
-    border: 1px solid var(--azul-caixa);
+    color: var(--verde-principal);
+    border: 1px solid var(--verde-principal);
 }
 
 .btn-secondary:hover {
-    background-color: var(--azul-caixa);
+    background-color: var(--verde-principal);
     color: var(--branco);
 }
 
@@ -159,7 +161,7 @@ section {
 .step-icon {
     width: 50px;
     height: 50px;
-    background-color: var(--azul-caixa);
+    background-color: var(--verde-principal);
     color: var(--branco);
     border-radius: 50%;
     display: flex;
@@ -222,28 +224,27 @@ section {
 .btn-upload {
     width: 100%;
     background-color: var(--branco);
-    color: var(--verde-esperanca);
-    border: 2px solid var(--verde-esperanca);
+    color: var(--verde-principal);
+    border: 2px solid var(--verde-principal);
 }
 
 .btn-upload:hover {
-    background-color: var(--verde-esperanca);
+    background-color: var(--verde-principal);
     color: var(--branco);
 }
 
 /* ---- RODAPÉ ---- */
+/* Alterado para um estilo mais limpo */
 .footer {
-    background-color: #222;
-    color: #ccc;
+    background-color: var(--cinza-fundo);
+    color: var(--cinza-texto);
     padding: 40px 0;
     text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.8;
 }
 
-.disclaimer {
-    font-size: 0.8rem;
-    color: #aaa;
-    margin-top: 10px;
-}
+/* A classe .disclaimer não é mais usada, pode ser removida se quiser */
 
 /* ---- MODAL DE LOGIN ---- */
 .modal-overlay {
@@ -338,7 +339,7 @@ section {
     margin-top: 20px;
 }
 .terms a {
-    color: var(--azul-caixa);
+    color: var(--verde-principal);
 }
 
 /* ---- RESPONSIVIDADE (PARA CELULARES) ---- */
