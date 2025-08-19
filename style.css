@@ -50,7 +50,7 @@ h1, h2, h3 {
 
 /* NOVO: Regra para controlar o tamanho da imagem da logo */
 .logo {
-    width: 200px; /* <-- Altere este valor para o tamanho que desejar */
+    width: 100px; /* <-- Altere este valor para o tamanho que desejar */
     height: auto; /* Mantém a proporção da imagem */
 }
 
